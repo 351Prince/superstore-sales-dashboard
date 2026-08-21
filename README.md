@@ -1,8 +1,8 @@
-\# Superstore Sales Analytics Dashboard
+# Superstore Sales Analytics Dashboard
 
 
 
-\## 📊 Project Overview
+## 📊 Project Overview
 
 
 
@@ -10,7 +10,7 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\## 🛠️ Tools \& Technologies
+## 🛠️ Tools \& Technologies
 
 
 
@@ -30,11 +30,11 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\## 📈 Power BI Dashboard
+## 📈 Power BI Dashboard
 
 
 
-\### Dashboard Overview
+### Dashboard Overview
 
 
 
@@ -42,7 +42,7 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\### Sales Analysis
+### Sales Analysis
 
 
 
@@ -50,7 +50,7 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\### Profit Analysis
+### Profit Analysis
 
 
 
@@ -58,7 +58,7 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\## 🔍 Key Analysis
+## 🔍 Key Analysis
 
 
 
@@ -84,7 +84,7 @@ An end-to-end E-Commerce Sales Analytics project built using Python, SQL, MySQL,
 
 
 
-\## 🗄️ SQL Analysis
+## 🗄️ SQL Analysis
 
 
 
@@ -92,7 +92,7 @@ SQL was used to analyze regional performance, category performance, product perf
 
 
 
-\## 🐍 Python Analysis
+## 🐍 Python Analysis
 
 
 
@@ -100,7 +100,7 @@ Python and Pandas were used for data cleaning, validation, exploratory analysis,
 
 
 
-\## 📁 Project Structure
+## 📁 Project Structure
 
 
 
