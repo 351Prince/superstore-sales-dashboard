@@ -117,3 +117,93 @@ SELECT
 FROM superstore
 GROUP BY Region
 ORDER BY Total_Sales DESC;
+---
+
+## 🐍 Python Analysis
+
+Python and Pandas were used for:
+
+* Data cleaning and preprocessing
+* Data validation and quality checks
+* Exploratory data analysis
+* KPI calculation
+* Sales and profit analysis
+* Trend analysis
+* Business insight generation
+
+Python helped prepare and analyze the dataset before building the Power BI dashboard.
+
+---
+
+## 📊 Key KPIs
+
+The Power BI dashboard tracks important business KPIs including:
+
+* Total Sales
+* Total Profit
+* Total Orders
+* Total Quantity
+* Average Order Value
+* Profit Margin
+* Sales by Region
+* Sales by Category
+* Sales by Segment
+
+---
+
+## 💡 Business Insights
+
+The analysis helps identify:
+
+* High-performing and underperforming regions
+* Profitable and loss-making product categories
+* Top-performing products
+* The impact of discounts on profitability
+* High-value customer segments
+* Monthly sales and profit trends
+* Shipping modes and their business impact
+
+---
+
+## 📁 Project Structure
+
+```text
+E-Commerce-Sales-Analytics/
+│
+├── data/
+│   └── superstore.csv
+│
+├── python/
+│   └── analysis.py
+│
+├── SQL/
+│   └── ecommerce_analysis.sql
+│
+├── dashboard/
+│   └── Superstore_Dashboard.pbix
+│
+├── screenshots/
+│   ├── dashboard_overview.png
+│   ├── sales_analysis.png
+│   └── profit_analysis.png
+│
+└── README.md
+```
+
+---
+
+## 🎯 Project Objective
+
+The objective of this project is to demonstrate an end-to-end data analytics workflow, from raw data preparation and SQL-based analysis to interactive Power BI dashboard development.
+
+The project demonstrates practical skills in **Python, SQL, MySQL, Power BI, DAX, data cleaning, data visualization, KPI development, and business analysis**.
+
+---
+
+## 👨‍💻 Author
+
+**Prince Anand**
+
+Data Analyst | Python | SQL | Power BI | Excel
+
+GitHub: [351Prince](https://github.com/351Prince)
