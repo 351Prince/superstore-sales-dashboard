@@ -64,42 +64,29 @@ The Power BI dashboard provides an interactive view of:
 
 ---
 
-## 🔍 Key Business Analysis
+## 💡 Key Business Insights
 
-### 📍 Regional Analysis
+- **$12.64M total sales** and **$1.47M total profit** were generated across **25,035 orders** and **4,873 customers**, with an overall **11.61% profit margin**.
 
-Analyzed sales and profit performance across regions to identify high-performing and underperforming markets.
+- **Central region** was the highest-performing region, generating **$2.82M in sales** and **$311.40K in profit**.
 
-### 🛍️ Category & Sub-Category Analysis
+- **Technology** was the top-performing category, contributing **$4.74M in sales** and **$663.78K in profit**.
 
-Compared sales, profit, and quantity across product categories and sub-categories to identify strong and weak product areas.
+- **Copiers** generated the highest profit among sub-categories at approximately **$258.57K**, while **Tables** generated a loss of approximately **$64.08K**.
 
-### 📦 Product Analysis
+- **Consumer** was the largest customer segment, contributing approximately **$6.51M in sales** and **$749.24K in profit**.
 
-Identified top-performing products based on sales and analyzed products generating negative profit.
+- **Apple Smart Phone, Full Size** was the highest-selling product with approximately **$86.94K in sales**, while **Canon imageCLASS 2200 Advanced Copier** generated the highest product-level profit of approximately **$25.20K**.
 
-### 💰 Discount Analysis
+- **Cubify CubeX 3D Printer Double Head Print** was the largest loss-making product, generating approximately **$8.88K in negative profit**.
 
-Analyzed the relationship between discount levels, sales, and profitability to identify potentially unprofitable discount strategies.
+- Discount analysis showed that **higher discount levels were generally associated with lower or negative profitability**, with discounts of **40%, 50%, 60%, and 70%** showing substantial negative profit.
 
-### 👥 Customer Analysis
+- **Standard Class** was the most frequently used shipping mode, accounting for **15,154 orders**, with approximately **$7.58M in sales** and **$890.60K in profit**.
 
-Analyzed customer-level sales and profit contribution to identify high-value customers.
+- Sales demonstrated a strong upward trend over the analyzed period, reaching the highest monthly sales of approximately **$555.31K in November 2014**.
 
-### 📅 Time-Series Analysis
-
-Analyzed monthly sales, profit, and quantity trends to understand business performance over time.
-
-### 🚚 Shipping Analysis
-
-Compared shipping modes based on order volume, sales, and profitability.
-
-### 👤 Segment Analysis
-
-Compared Consumer, Corporate, and Home Office segments based on customers, sales, profit, and quantity.
-
----
-
+- The analysis identified **high-performing regions, profitable categories, loss-making products, discount-related profitability risks, and customer segment contributions** to support data-driven business decisions.
 ## 🗄️ SQL Analysis
 
 SQL was used to perform business-focused analysis including:

@@ -1,148 +1,251 @@
 import pandas as pd
 
-file_path = r"C:\Users\hp\Desktop\E-Commerce-Sales-Analytics\data\superstore.csv"
-
+# Load dataset
+file_path = "data/superstore.csv"
 df = pd.read_csv(file_path)
 
-print("Dataset loaded successfully!")
-print("Rows and Columns:", df.shape)
+# =============================
+# KEY KPIs
+# =============================
 
-print("\nColumn Names:")
-print(df.columns.tolist())
+total_sales = df["Sales"].sum()
+total_profit = df["Profit"].sum()
+total_quantity = df["Quantity"].sum()
+total_orders = df["Order.ID"].nunique()
+total_customers = df["Customer.ID"].nunique()
 
-print("\nFirst 5 Rows:")
-print(df.head())
+profit_margin = (total_profit / total_sales) * 100
+average_order_value = total_sales / total_orders
 
-print("\nMissing Values:")
-print(df.isnull().sum())
+print("\n========== KEY KPIs ==========")
+print(f"Total Sales        : ${total_sales:,.2f}")
+print(f"Total Profit       : ${total_profit:,.2f}")
+print(f"Total Orders       : {total_orders:,}")
+print(f"Total Quantity     : {total_quantity:,}")
+print(f"Total Customers    : {total_customers:,}")
+print(f"Profit Margin      : {profit_margin:.2f}%")
+print(f"Average Order Value: ${average_order_value:,.2f}")
 
-print("\n--- DATA TYPES ---")
-print(df.dtypes)
 
-print("\n--- SUMMARY STATISTICS ---")
-print(df.describe())
+# =============================
+# REGION ANALYSIS
+# =============================
 
-print("\n--- TOTAL SALES ---")
-print(df["Sales"].sum())
-
-print("\n--- TOTAL PROFIT ---")
-print(df["Profit"].sum())
-
-print("\n--- TOTAL QUANTITY ---")
-print(df["Quantity"].sum())
-
-print("\n--- TOTAL ORDERS ---")
-print(df["Order.ID"].nunique())
-
-print("\n--- TOTAL CUSTOMERS ---")
-print(df["Customer.ID"].nunique())
-
-print("\n--- SALES BY CATEGORY ---")
-print(df.groupby("Category")["Sales"].sum().sort_values(ascending=False))
-
-print("\n--- PROFIT BY CATEGORY ---")
-print(df.groupby("Category")["Profit"].sum().sort_values(ascending=False))
-
-print("\n--- SALES BY REGION ---")
-print(df.groupby("Region")["Sales"].sum().sort_values(ascending=False))
-
-print("\n--- PROFIT BY REGION ---")
-print(df.groupby("Region")["Profit"].sum().sort_values(ascending=False))
-
-# Convert date columns
-df["Order.Date"] = pd.to_datetime(df["Order.Date"])
-
-# Create Year-Month column
-df["Year-Month"] = df["Order.Date"].dt.to_period("M").astype(str)
-
-# Monthly Sales and Profit
-monthly = df.groupby("Year-Month").agg(
-    Sales=("Sales", "sum"),
-    Profit=("Profit", "sum"),
-    Quantity=("Quantity", "sum")
-).reset_index()
-
-print("\n--- MONTHLY SALES & PROFIT ---")
-print(monthly.to_string(index=False))
-
-# Best sales month
-best_sales_month = monthly.loc[monthly["Sales"].idxmax()]
-
-print("\n--- BEST SALES MONTH ---")
-print(best_sales_month)
-
-# Best profit month
-best_profit_month = monthly.loc[monthly["Profit"].idxmax()]
-
-print("\n--- BEST PROFIT MONTH ---")
-print(best_profit_month)
-# Top 10 products by sales
-top_products_sales = (
-    df.groupby("Product.Name")
-      .agg(
-          Sales=("Sales", "sum"),
-          Profit=("Profit", "sum"),
-          Quantity=("Quantity", "sum")
-      )
-      .sort_values("Sales", ascending=False)
-      .head(10)
+region_analysis = (
+    df.groupby("Region")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_values("Sales", ascending=False)
 )
 
-print("\n--- TOP 10 PRODUCTS BY SALES ---")
-print(top_products_sales)
+print("\n========== REGION ANALYSIS ==========")
+print(region_analysis)
 
-# Top 10 products by profit
-top_products_profit = (
-    df.groupby("Product.Name")
-      .agg(
-          Sales=("Sales", "sum"),
-          Profit=("Profit", "sum"),
-          Quantity=("Quantity", "sum")
-      )
-      .sort_values("Profit", ascending=False)
-      .head(10)
+best_region = region_analysis["Sales"].idxmax()
+best_region_sales = region_analysis.loc[best_region, "Sales"]
+best_region_profit = region_analysis.loc[best_region, "Profit"]
+
+print(f"\nBest Region: {best_region}")
+print(f"Best Region Sales: ${best_region_sales:,.2f}")
+print(f"Best Region Profit: ${best_region_profit:,.2f}")
+
+
+# =============================
+# CATEGORY ANALYSIS
+# =============================
+
+category_analysis = (
+    df.groupby("Category")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_values("Sales", ascending=False)
 )
 
-print("\n--- TOP 10 PRODUCTS BY PROFIT ---")
-print(top_products_profit)
+print("\n========== CATEGORY ANALYSIS ==========")
+print(category_analysis)
 
-# Loss-making products
-loss_products = (
-    df.groupby("Product.Name")
-      .agg(
-          Sales=("Sales", "sum"),
-          Profit=("Profit", "sum"),
-          Quantity=("Quantity", "sum")
-      )
-      .query("Profit < 0")
-      .sort_values("Profit")
+best_category = category_analysis["Sales"].idxmax()
+best_category_sales = category_analysis.loc[best_category, "Sales"]
+best_category_profit = category_analysis.loc[best_category, "Profit"]
+
+print(f"\nBest Category: {best_category}")
+print(f"Best Category Sales: ${best_category_sales:,.2f}")
+print(f"Best Category Profit: ${best_category_profit:,.2f}")
+
+
+# =============================
+# SUB-CATEGORY ANALYSIS
+# =============================
+
+subcategory_analysis = (
+    df.groupby("Sub.Category")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_values("Profit", ascending=False)
 )
 
-print("\n--- LOSS-MAKING PRODUCTS ---")
-print(loss_products.head(10))
-# Discount vs Profit Analysis
+print("\n========== SUB-CATEGORY ANALYSIS ==========")
+print(subcategory_analysis)
+
+best_subcategory = subcategory_analysis["Profit"].idxmax()
+worst_subcategory = subcategory_analysis["Profit"].idxmin()
+
+print(f"\nMost Profitable Sub-Category: {best_subcategory}")
+print(
+    f"Profit: ${subcategory_analysis.loc[best_subcategory, 'Profit']:,.2f}"
+)
+
+print(f"\nLeast Profitable Sub-Category: {worst_subcategory}")
+print(
+    f"Profit: ${subcategory_analysis.loc[worst_subcategory, 'Profit']:,.2f}"
+)
+
+
+# =============================
+# SEGMENT ANALYSIS
+# =============================
+
+segment_analysis = (
+    df.groupby("Segment")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_values("Sales", ascending=False)
+)
+
+print("\n========== SEGMENT ANALYSIS ==========")
+print(segment_analysis)
+
+best_segment = segment_analysis["Sales"].idxmax()
+
+print(f"\nBest Customer Segment: {best_segment}")
+print(
+    f"Best Segment Sales: ${segment_analysis.loc[best_segment, 'Sales']:,.2f}"
+)
+
+
+# =============================
+# PRODUCT ANALYSIS
+# =============================
+
+product_analysis = (
+    df.groupby("Product.Name")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+)
+
+print("\n========== TOP 5 PRODUCTS BY SALES ==========")
+print(
+    product_analysis
+    .sort_values("Sales", ascending=False)
+    .head(5)
+)
+
+print("\n========== TOP 5 PRODUCTS BY PROFIT ==========")
+print(
+    product_analysis
+    .sort_values("Profit", ascending=False)
+    .head(5)
+)
+
+print("\n========== TOP 5 LOSS-MAKING PRODUCTS ==========")
+print(
+    product_analysis
+    .sort_values("Profit")
+    .head(5)
+)
+
+
+# =============================
+# DISCOUNT ANALYSIS
+# =============================
 
 discount_analysis = (
     df.groupby("Discount")
-      .agg(
-          Sales=("Sales", "sum"),
-          Profit=("Profit", "sum"),
-          Quantity=("Quantity", "sum")
-      )
-      .reset_index()
-      .sort_values("Discount")
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_index()
 )
 
-print("\n--- DISCOUNT VS PROFIT ---")
+print("\n========== DISCOUNT ANALYSIS ==========")
 print(discount_analysis)
 
-# Average profit by discount
-avg_profit_discount = (
-    df.groupby("Discount")["Profit"]
-      .mean()
-      .reset_index()
-      .sort_values("Discount")
+
+# =============================
+# SHIPPING MODE ANALYSIS
+# =============================
+
+shipping_analysis = (
+    df.groupby("Ship.Mode")
+    .agg(
+        Orders=("Order.ID", "nunique"),
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+    .sort_values("Orders", ascending=False)
 )
 
-print("\n--- AVERAGE PROFIT BY DISCOUNT ---")
-print(avg_profit_discount)
+print("\n========== SHIPPING MODE ANALYSIS ==========")
+print(shipping_analysis)
+
+
+# =============================
+# MONTHLY TREND ANALYSIS
+# =============================
+
+df["Order.Date"] = pd.to_datetime(df["Order.Date"])
+
+monthly_analysis = (
+    df.groupby(df["Order.Date"].dt.to_period("M"))
+    .agg(
+        Sales=("Sales", "sum"),
+        Profit=("Profit", "sum")
+    )
+)
+
+print("\n========== MONTHLY SALES & PROFIT ==========")
+print(monthly_analysis)
+
+
+# =============================
+# SAVE BUSINESS SUMMARY
+# =============================
+
+summary = {
+    "Total Sales": total_sales,
+    "Total Profit": total_profit,
+    "Total Orders": total_orders,
+    "Total Quantity": total_quantity,
+    "Total Customers": total_customers,
+    "Profit Margin (%)": profit_margin,
+    "Average Order Value": average_order_value,
+    "Best Region": best_region,
+    "Best Category": best_category,
+    "Best Sub-Category": best_subcategory,
+    "Worst Sub-Category": worst_subcategory,
+    "Best Segment": best_segment
+}
+
+summary_df = pd.DataFrame([summary])
+
+summary_df.to_csv(
+    "report/business_summary.csv",
+    index=False
+)
+
+print("\n========================================")
+print("Analysis completed successfully!")
+print("Summary saved to:")
+print("report/business_summary.csv")
+print("========================================")
