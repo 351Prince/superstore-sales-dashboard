@@ -1,6 +1,6 @@
 # Superstore Sales Analytics Dashboard
 
-An end-to-end **E-Commerce Sales Analytics project** built using Python, SQL, MySQL, and Power BI to analyze sales performance, profitability, customer behavior, product performance, regional trends, and discount impact.
+An end-to-end **E-Commerce Sales Analytics project** built using **Python, SQL, MySQL, and Power BI** to analyze sales performance, profitability, customer behavior, product performance, regional trends, and discount impact.
 
 ---
 
@@ -107,18 +107,20 @@ SELECT
 FROM superstore
 GROUP BY Region
 ORDER BY Total_Sales DESC;
+```
+
 ### SQL Concepts Used
 
-* SELECT and filtering
-* WHERE conditions
-* GROUP BY
-* HAVING
-* ORDER BY
-* Aggregate functions
-* CASE statements
-* JOINs
-* Subqueries
-* Date functions
+- SELECT
+- WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
+- Aggregate Functions
+- CASE Statements
+- JOINs
+- Subqueries
+- Date Functions
 
 ---
 
@@ -128,17 +130,17 @@ Python and Pandas were used to perform data preparation, validation, exploratory
 
 Key activities included:
 
-* Data loading and preprocessing
-* Column and data-type validation
-* Missing-value analysis
-* Duplicate and data-quality checks
-* Exploratory data analysis
-* Sales and profit calculations
-* Regional and category analysis
-* Customer and product analysis
-* Discount analysis
-* Monthly sales and profit trend analysis
-* Business insight generation
+- Data loading and preprocessing
+- Column and data-type validation
+- Missing-value analysis
+- Duplicate and data-quality checks
+- Exploratory data analysis
+- Sales and profit calculations
+- Regional and category analysis
+- Customer and product analysis
+- Discount analysis
+- Monthly sales and profit trend analysis
+- Business insight generation
 
 The Python analysis generated a business summary report containing key KPIs and analytical findings used to support the Power BI dashboard.
 
@@ -146,16 +148,14 @@ The Python analysis generated a business summary report containing key KPIs and 
 
 ## 📊 Key KPIs
 
-The dashboard tracks the following business KPIs:
-
-| KPI                 |   Value |
-| ------------------- | ------: |
-| Total Sales         | $12.64M |
-| Total Profit        |  $1.47M |
-| Total Orders        |  25,035 |
-| Total Customers     |   4,873 |
-| Total Quantity      | 178,312 |
-| Profit Margin       |  11.61% |
+| KPI | Value |
+|---|---:|
+| Total Sales | $12.64M |
+| Total Profit | $1.47M |
+| Total Orders | 25,035 |
+| Total Customers | 4,873 |
+| Total Quantity | 178,312 |
+| Profit Margin | 11.61% |
 | Average Order Value | $505.01 |
 
 ---
@@ -192,25 +192,25 @@ E-Commerce-Sales-Analytics/
 
 ## 🎯 Project Objective
 
-The objective of this project is to demonstrate an end-to-end data analytics workflow, from raw data preparation and SQL-based business analysis to interactive Power BI dashboard development.
+The objective of this project is to demonstrate an **end-to-end data analytics workflow**, from raw data preparation and SQL-based business analysis to interactive Power BI dashboard development.
 
-The project demonstrates how data can be transformed into meaningful business insights using Python, SQL, MySQL, Power BI, and DAX.
+The project demonstrates how data can be transformed into meaningful business insights using **Python, Pandas, SQL, MySQL, Power BI, and DAX**.
 
 ---
 
 ## 📌 Skills Demonstrated
 
-* Data Cleaning & Preprocessing
-* Exploratory Data Analysis
-* Python & Pandas
-* SQL Business Analysis
-* MySQL
-* Power BI Dashboard Development
-* DAX Measures
-* KPI Development
-* Data Visualization
-* Business Intelligence
-* Git & GitHub
+- Data Cleaning & Preprocessing
+- Exploratory Data Analysis
+- Python & Pandas
+- SQL Business Analysis
+- MySQL
+- Power BI Dashboard Development
+- DAX Measures
+- KPI Development
+- Data Visualization
+- Business Intelligence
+- Git & GitHub
 
 ---
 
@@ -220,8 +220,8 @@ The project demonstrates how data can be transformed into meaningful business in
 
 **Data Analyst | Python | SQL | Power BI | Excel**
 
-* GitHub: [351Prince](https://github.com/351Prince)
-* LinkedIn: [Prince Anand](https://www.linkedin.com/in/prince-anand-b32414258/)
+- GitHub: [351Prince](https://github.com/351Prince)
+- LinkedIn: [Prince Anand](https://www.linkedin.com/in/prince-anand-b32414258/)
 
 ---
 
