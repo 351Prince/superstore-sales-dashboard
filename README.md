@@ -8,7 +8,7 @@ The project combines **Python, SQL, MySQL, and Power BI** to transform raw Super
 
 ## 🚀 Project Overview
 
-This project focuses on analyzing an E-Commerce Superstore dataset to answer important business questions such as:
+This project analyzes an E-Commerce Superstore dataset to answer key business questions:
 
 * Which regions generate the highest sales and profit?
 * Which categories and sub-categories perform best?
@@ -18,7 +18,7 @@ This project focuses on analyzing an E-Commerce Superstore dataset to answer imp
 * How do sales and profit change over time?
 * Which shipping modes are most frequently used?
 
-The analysis was performed using **Python and SQL**, while **Power BI** was used to create an interactive business intelligence dashboard.
+**Python and SQL** were used for data preparation and analysis, while **Power BI** was used to build an interactive business intelligence dashboard.
 
 ---
 
@@ -43,7 +43,7 @@ The Power BI dashboard provides an interactive view of:
 * Sales performance
 * Profitability
 * Regional performance
-* Category & sub-category analysis
+* Category and sub-category analysis
 * Customer segmentation
 * Product performance
 * Discount analysis
@@ -68,11 +68,11 @@ The Power BI dashboard provides an interactive view of:
 
 ### 📍 Regional Analysis
 
-Analyzed sales and profit performance across different regions to identify high-performing and underperforming markets.
+Analyzed sales and profit performance across regions to identify high-performing and underperforming markets.
 
 ### 🛍️ Category & Sub-Category Analysis
 
-Compared sales, profit, and quantity across product categories and sub-categories.
+Compared sales, profit, and quantity across product categories and sub-categories to identify strong and weak product areas.
 
 ### 📦 Product Analysis
 
@@ -92,7 +92,7 @@ Analyzed monthly sales, profit, and quantity trends to understand business perfo
 
 ### 🚚 Shipping Analysis
 
-Compared different shipping modes based on order volume, sales, and profitability.
+Compared shipping modes based on order volume, sales, and profitability.
 
 ### 👤 Segment Analysis
 
@@ -104,16 +104,16 @@ Compared Consumer, Corporate, and Home Office segments based on customers, sales
 
 SQL was used to perform business-focused analysis including:
 
-* Regional sales & profit analysis
-* Category performance
+* Regional sales and profit analysis
+* Category and sub-category performance
 * Top-selling products
 * Loss-making products
-* Discount impact
+* Discount impact analysis
 * Monthly sales trends
 * Shipping mode analysis
 * Customer segment analysis
 * Customer performance
-* Sub-category performance
+* Regional profitability
 
 ### Example SQL Query
 
@@ -127,6 +127,19 @@ GROUP BY Region
 ORDER BY Total_Sales DESC;
 ```
 
+### SQL Concepts Used
+
+* SELECT
+* WHERE
+* GROUP BY
+* HAVING
+* ORDER BY
+* Aggregate Functions
+* CASE Statements
+* Subqueries
+* Date Functions
+* JOINs
+
 ---
 
 ## 🐍 Python Analysis
@@ -134,14 +147,15 @@ ORDER BY Total_Sales DESC;
 Python and Pandas were used for:
 
 * Data cleaning and preprocessing
-* Data validation and quality checks
+* Data validation
+* Missing-value analysis
 * Exploratory data analysis
-* KPI calculation
+* KPI calculations
 * Sales and profit analysis
 * Trend analysis
 * Business insight generation
 
-Python helped prepare and analyze the dataset before building the Power BI dashboard.
+Python was used to prepare and analyze the dataset before visualization in Power BI.
 
 ---
 
@@ -149,15 +163,15 @@ Python helped prepare and analyze the dataset before building the Power BI dashb
 
 The Power BI dashboard tracks important business KPIs including:
 
-* Total Sales
-* Total Profit
-* Total Orders
-* Total Quantity
-* Average Order Value
-* Profit Margin
-* Sales by Region
-* Sales by Category
-* Sales by Segment
+* **Total Sales**
+* **Total Profit**
+* **Total Orders**
+* **Total Quantity**
+* **Average Order Value**
+* **Profit Margin**
+* **Sales by Region**
+* **Sales by Category**
+* **Sales by Segment**
 
 ---
 
@@ -167,11 +181,13 @@ The analysis helps identify:
 
 * High-performing and underperforming regions
 * Profitable and loss-making product categories
-* Top-performing products
-* The impact of discounts on profitability
+* Top-performing and loss-making products
+* The relationship between discounts and profitability
 * High-value customer segments
 * Monthly sales and profit trends
-* Shipping modes and their business impact
+* Shipping modes with different business impacts
+
+> **Note:** Specific numerical insights can be added here based on the final Power BI analysis.
 
 ---
 
@@ -204,9 +220,26 @@ E-Commerce-Sales-Analytics/
 
 ## 🎯 Project Objective
 
-The objective of this project is to demonstrate an end-to-end data analytics workflow, from raw data preparation and SQL-based analysis to interactive Power BI dashboard development.
+The objective of this project is to demonstrate an **end-to-end data analytics workflow**, from raw data preparation and SQL-based analysis to interactive Power BI dashboard development.
 
-The project demonstrates practical skills in **Python, SQL, MySQL, Power BI, DAX, data cleaning, data visualization, KPI development, and business analysis**.
+The project demonstrates practical skills in:
+
+**Python • Pandas • SQL • MySQL • Power BI • DAX • Data Cleaning • Data Visualization • KPI Development • Business Analysis**
+
+---
+
+## 📌 Skills Demonstrated
+
+* Data Cleaning & Preprocessing
+* Exploratory Data Analysis
+* SQL Business Analysis
+* MySQL
+* Power BI Dashboard Development
+* DAX Measures
+* KPI Development
+* Data Visualization
+* Business Intelligence
+* Git & GitHub
 
 ---
 
@@ -214,6 +247,11 @@ The project demonstrates practical skills in **Python, SQL, MySQL, Power BI, DAX
 
 **Prince Anand**
 
-Data Analyst | Python | SQL | Power BI | Excel
+**Data Analyst | Python | SQL | Power BI | Excel**
 
-GitHub: [351Prince](https://github.com/351Prince)
+* GitHub: [351Prince](https://github.com/351Prince)
+* LinkedIn: [Prince Anand](https://www.linkedin.com/in/prince-anand-b32414258/)
+
+---
+
+⭐ If you found this project useful, feel free to star the repository.
