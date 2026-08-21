@@ -108,7 +108,6 @@ FROM superstore
 GROUP BY Region
 ORDER BY Total_Sales DESC;
 ```
-
 ### SQL Concepts Used
 
 - SELECT
